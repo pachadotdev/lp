@@ -1,10 +1,11 @@
 Package: lp
 Type: Package
-Title: LP's Complete Songs
+Title: LP's lyrics
 Version: 0.1.0
 Authors@R: person("Mauricio", "Vargas", email = "mvargas@dcc.uchile.cl", role = c("aut", "cre"))
-Description: Full lyrics for LP's 3 completed albums, ready for text analysis.
-    These albums are "Lost on You", "Forever For Now", and "Heart to Mouth".
+Description: Lyrics for LP's 5 completed albums, ready for text analysis.
+    These albums are "Heart-Shaped Scar" (2001),  "Suburban Sprawl and Alcohol" (2004),
+    "Forever For Now" (2014), "Lost on You" (2016), and "Heart to Mouth" (2018).
 License: AGPL-3
 Encoding: UTF-8
 LazyData: true
