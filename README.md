@@ -12,3 +12,5 @@ You can install the released version of lp from Github with:
 ``` r
 source("https://install-github.me/pachamaltese/lp")
 ```
+
+This package comes with a [Code of Conduct](https://github.com/pachamaltese/lp/CODE_OF_CONDUCT.md)

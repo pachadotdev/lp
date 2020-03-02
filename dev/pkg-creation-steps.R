@@ -17,6 +17,21 @@ use_git_ignore("data_raw")
 use_build_ignore("data_raw")
 use_build_ignore("dev")
 use_build_ignore("docs")
+use_code_of_conduct()
+
+# Heart-Shaped Scar ----
+
+heart_shaped_scar <- read_excel("data_raw/heart_shaped_scar.xlsx")
+
+heart_shaped_scar_2 <- as.list(heart_shaped_scar$lyrics)
+
+for (i in seq_along(heart_shaped_scar_2)) {
+  heart_shaped_scar_2[[i]] <- read_lines(heart_shaped_scar_2[[i]])
+}
+
+names(heart_shaped_scar_2) <- heart_shaped_scar$song
+names(heart_shaped_scar_2) <- make_clean_names(names(heart_shaped_scar_2))
+heart_shaped_scar <- heart_shaped_scar_2
 
 # Lost on You ----
 
@@ -62,6 +77,8 @@ heart_to_mouth <- heart_to_mouth_2
 
 # Save ----
 
-save(lost_on_you, file = "data/lost_on_you.rda")
-save(forever_for_now, file = "data/forever_for_now.rda")
-save(heart_to_mouth, file = "data/heart_to_mouth.rda")
+usethis::use_data(heart_shaped_scar, overwrite = T)
+usethis::use_data(lost_on_you, overwrite = T)
+usethis::use_data(heart_to_mouth, overwrite = T)
+usethis::use_data(forever_for_now, overwrite = T)
+

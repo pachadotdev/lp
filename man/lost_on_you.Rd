@@ -5,7 +5,7 @@
 Lost On You
 }
 \description{
-Released May 5, 2017
+Released December 9, 2016
 }
 \usage{data("lost_on_you")}
 \format{

@@ -5,7 +5,7 @@
 Forever For Now
 }
 \description{
-Released January 26, 2018
+Released June 2, 2014
 }
 \usage{data("forever_for_now")}
 \format{
