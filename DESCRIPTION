@@ -5,7 +5,7 @@ Version: 0.1.0
 Authors@R: person("Mauricio", "Vargas", email = "mvargas@dcc.uchile.cl", role = c("aut", "cre"))
 Description: Full lyrics for LP's 3 completed albums, ready for text analysis.
     These albums are "Lost on You", "Forever For Now", and "Heart to Mouth".
-License: CC0
+License: AGPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -13,5 +13,6 @@ RoxygenNote: 7.0.2
 Suggests: 
     dplyr,
     testthat
+Depends: R (>= 2.10)
 URL: https://pacha.dev/lp
 BugReports: https://github.com/pachamaltese/lp/issues

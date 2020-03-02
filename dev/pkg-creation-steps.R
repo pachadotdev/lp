@@ -6,8 +6,9 @@ library(janitor)
 use_directory("dev")
 use_directory("data_raw")
 use_directory("data")
+use_directory("R")
 
-use_cc0_license("Mauricio Vargas")
+use_agpl3_license("Mauricio Vargas")
 use_roxygen_md()
 use_package("dplyr", type = "Suggest")
 use_package("testthat", type = "Suggest")
@@ -32,6 +33,22 @@ for (i in seq_along(heart_shaped_scar_2)) {
 names(heart_shaped_scar_2) <- heart_shaped_scar$song
 names(heart_shaped_scar_2) <- make_clean_names(names(heart_shaped_scar_2))
 heart_shaped_scar <- heart_shaped_scar_2
+
+# Subrurban Sprawl and Alcohol ----
+
+# Heart-Shaped Scar ----
+
+suburban_sprawl_and_alcohol <- read_excel("data_raw/suburban_sprawl_and_alcohol.xlsx")
+
+suburban_sprawl_and_alcohol_2 <- as.list(suburban_sprawl_and_alcohol$lyrics)
+
+for (i in seq_along(suburban_sprawl_and_alcohol_2)) {
+  suburban_sprawl_and_alcohol_2[[i]] <- read_lines(suburban_sprawl_and_alcohol_2[[i]])
+}
+
+names(suburban_sprawl_and_alcohol_2) <- suburban_sprawl_and_alcohol$song
+names(suburban_sprawl_and_alcohol_2) <- make_clean_names(names(suburban_sprawl_and_alcohol_2))
+suburban_sprawl_and_alcohol <- suburban_sprawl_and_alcohol_2
 
 # Lost on You ----
 
@@ -78,6 +95,7 @@ heart_to_mouth <- heart_to_mouth_2
 # Save ----
 
 usethis::use_data(heart_shaped_scar, overwrite = T)
+usethis::use_data(suburban_sprawl_and_alcohol, overwrite = T)
 usethis::use_data(lost_on_you, overwrite = T)
 usethis::use_data(heart_to_mouth, overwrite = T)
 usethis::use_data(forever_for_now, overwrite = T)
